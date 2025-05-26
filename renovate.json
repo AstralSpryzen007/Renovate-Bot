@@ -1,6 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "enabledManagers": ["npm"], // or "yarn", "docker", etc. as per your project
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "major"],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": [".*"],
+      "matchVulnerabilitySeverity": "low",
+      "enabled": true,
+      "automerge": false
+    }
   ]
 }
