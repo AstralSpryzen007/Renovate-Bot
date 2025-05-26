@@ -4,7 +4,7 @@
   "vulnerabilityAlerts": {
     "enabled": true
   },
-  "enabledManagers": ["npm"], // or "yarn", "docker", etc. as per your project
+  "enabledManagers": ["npm"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "major"],
