@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.30.0",
     "braces": "^2.3.2",
-    "clean-css": "^4.1.9",
+    "clean-css": "^5.0.0",
     "cryptiles": "^2.0.5",
     "cypress": "^9.7.0",
     "debug": "^2.6.8",
