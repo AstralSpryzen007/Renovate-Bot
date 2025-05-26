@@ -5,6 +5,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+       "matchDepTypes": ["dependencies", "devDependencies", "optionalDependencies", "peerDependencies"],
       "enabled": false,
       "matchPackageNames": [
         "*"
