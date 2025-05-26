@@ -12,6 +12,7 @@
   "osvVulnerabilityAlerts": true,
   "lockFileMaintenance": {
     "enabled": true,
-    "labels": ["security", "transitive-fix"]
+    "labels": ["security", "transitive-fix"],
+    "schedule": ["at any time"]
   }
 }
