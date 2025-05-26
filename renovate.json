@@ -10,7 +10,7 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest", "major"],
        "matchDepTypes": ["dependencies", "devDependencies", "optionalDependencies", "peerDependencies"],
-      "enabled": false,
+      "enabled": true,
       "matchPackageNames": [
         "*"
       ]
