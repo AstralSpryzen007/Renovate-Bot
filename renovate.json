@@ -12,8 +12,9 @@
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "matchUpdateTypes": ["security"],
-      "vulnerabilityFixStrategy": "lowest"
+      "vulnerabilityAlerts": {
+        "vulnerabilityFixStrategy": "lowest"
+      }
     }
   ]
 }
