@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.0.0",
-    "braces": "^2.3.2",
+    "braces": "^3.0.0",
     "clean-css": "^5.0.0",
     "cryptiles": "^2.0.5",
     "cypress": "^9.7.0",
