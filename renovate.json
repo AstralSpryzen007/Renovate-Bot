@@ -4,17 +4,21 @@
     "config:recommended",
     "security:only-security-updates"
   ],
-  "dependencyDashboardApproval": false,
-  "rangeStrategy": "update-lockfile",
-  "commitMessageSuffix": "[SECURITY]",
-  "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
+  "dependencyDashboard": true,
   "prCreation": "immediate",
+  "commitMessageSuffix": "[SECURITY]",
+  "rangeStrategy": "update-lockfile",
   "packageRules": [
     {
-      "matchManagers": ["npm"],
-      "vulnerabilityAlerts": {
-        "vulnerabilityFixStrategy": "lowest"
-      }
+      "matchUpdateTypes": ["security"],
+      "groupName": "security updates",
+      "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
+      "vulnerabilityAlerts": [
+        {
+          "matchBaseBranches": ["main"],
+          "vulnerabilityFixStrategy": "lowest"
+        }
+      ]
     }
   ]
 }
