@@ -1,17 +1,55 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+
   "packageRules": [
     {
       "enabled": false,
       "matchPackageNames": ["*"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "matchSourceUrls": ["https://github.com/advisories/**"],
+      "labels": ["security", "major", "needs-review"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "matchSourceUrls": ["https://github.com/advisories/**"],
+      "labels": ["security", "minor", "needs-review"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "matchSourceUrls": ["https://github.com/advisories/**"],
+      "labels": ["security", "patch"]
+    },
+    {
+      "matchUpdateTypes": ["digest", "pin"],
+      "labels": ["security", "pinned"]
     }
   ],
+
   "vulnerabilityAlerts": {
     "enabled": true
   },
   "osvVulnerabilityAlerts": true,
+
   "lockFileMaintenance": {
     "enabled": true,
-    "labels": ["security", "transitive-fix"]
-  }
+    "labels": ["lockfile", "security"],
+    "schedule": ["at any time"]
+  },
+
+  "labels": ["security", "dependencies"],
+  "commitMessagePrefix": "fix(deps):",
+  "commitMessageAction": "security update",
+  "commitMessageTopic": "{{depName}} to {{newVersion}}",
+
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "🛡️ Security Updates Dashboard",
+
+  "prHourlyLimit": 5,
+  "prConcurrentLimit": 5,
+
+  "assignees": ["@your-security-team"],
+  "reviewers": ["@your-team-lead"]
 }
