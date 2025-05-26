@@ -13,7 +13,7 @@
     "axios": "^1.0.0",
     "braces": "^2.3.2",
     "clean-css": "^5.0.0",
-    "cryptiles": "^2.0.5",
+    "cryptiles": "^4.0.0",
     "cypress": "^9.7.0",
     "debug": "^2.6.8",
     "express": "^4.17.1",
