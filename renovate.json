@@ -11,6 +11,5 @@
     "commitMessageSuffix": "[SECURITY]",
     "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
     "prCreation": "immediate",
-    "vulnerabilityFixStrategy": "lowest",
-    "security":"only-security-updates"
-  }
+    "vulnerabilityFixStrategy": "lowest"
+}
