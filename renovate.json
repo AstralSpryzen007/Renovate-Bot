@@ -1,16 +1,19 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "config:recommended",
-      "security:only-security-updates"
-    ],
-    "groupName": null,
-    "schedule": [],
-    "dependencyDashboardApproval": false,
-    "minimumReleaseAge": null,
-    "rangeStrategy": "update-lockfile",
-    "commitMessageSuffix": "[SECURITY]",
-    "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
-    "prCreation": "immediate",
-    "vulnerabilityFixStrategy": "lowest"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "security:only-security-updates"
+  ],
+  "dependencyDashboardApproval": false,
+  "rangeStrategy": "update-lockfile",
+  "commitMessageSuffix": "[SECURITY]",
+  "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
+  "prCreation": "immediate",
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["security"],
+      "vulnerabilityFixStrategy": "lowest"
+    }
+  ]
 }
