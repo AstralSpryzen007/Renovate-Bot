@@ -3,5 +3,8 @@
   "extends": [
     "config:recommended",
     "security:only-security-updates"
-  ]
+  ],
+"vulnerabilityAlerts": {
+    "vulnerabilityFixStrategy": "highest"
+  }
 }
